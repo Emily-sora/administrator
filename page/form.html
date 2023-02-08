@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form UI - 관리 시스템</title>
+    <meta name="description" content="관리 시스템 폼 UI 정의 페이지입니다.">
+    <link rel="shortcut icon" href="../favicon.ico.png" type="image/png">
+    <!-- Webfont -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <!-- JavaScript & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- skip navigation -->
+        <div id="skip"><a href="#content">본문 바로가기</a></div>
+
+        <!-- side bar -->
+        <aside class="sidebar">
+            <h1 class="logo"><a href="index.html"><img src="images/img-logo.png" alt="로고" /><span>Adminator</span></a>
+            </h1>
+            <div class="sidebar-menu">
+                <div class="box">
+                    <!-- home -->
+                    <p class="menu-tit">Home</p>
+                    <ul class="menu">
+                        <li><a href="index.html"><i class="fas fa-desktop"></i><em>Dashboard</em></a></li>
+                    </ul>
+                    <!-- info -->
+                    <p class="menu-tit">Info</p>
+                    <ul class="menu">
+                        <li>
+                            <a href="#"><i class="fas fa-user"></i><em>회원정보</em></a>
+                            <ul>
+                                <li><a href="#">일반회원</a></li>
+                                <li><a href="#">채용담당자</a></li>
+                                <li><a href="#">관리자</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-landmark"></i><em>기관정보</em></a>
+                            <ul>
+                                <li><a href="#">대학교정보</a></li>
+                                <li><a href="#">대학원정보</a></li>
+                                <li><a href="#">학과정보</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- features -->
+                    <p class="menu-tit">Features</p>
+                    <ul class="menu">
+                        <li>
+                            <a href="#"><i class="fas fa-edit"></i><em>Form</em></a>
+                            <ul>
+                                <li><a href="./page/board-list.html">List View<i class="far fa-check-square"></i></a>
+                                </li>
+                                <li><a href="index.html">Form UI<i class="far fa-check-square"></i></a></li>
+                                <li><a href="#">General Form</a></li>
+                                <li><a href="#">Advanced Components</a></li>
+                                <li><a href="#">Form Wizard</a></li>
+                                <li><a href="#">Layer Popup</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-file"></i><em>Page</em></a>
+                            <ul>
+                                <li><a href="#">로그인 페이지</a></li>
+                                <li><a href="#">404 에러 페이지</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-paint-roller"></i><em>UI Elements</em></a>
+                            <ul>
+                                <li><a href="page/buttons.html">Buttons<i class="far fa-check-square"></i></a></li>
+                                <li><a href="page/layout.html">Layout<i class="far fa-check-square"></i></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-chart-pie"></i><em>Chart (Google)</em></a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i><em>Calender</em></a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- content page -->
+        <div class="content-page">
+            <!-- contents-->
+            <div class="page basic-form">
+                <div class="page-tit" class="">
+                    <h2>Form UI</h2>
+                    <p>게시판 등록 페이지(기본 폼) 정의</p>
+                </div>
+                <form action="">
+                    <div class="board-write">
+                        <div class="b-table-box">
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="user-id">ID</label><span class="required">*</span>
+                                </div>
+                                <div class="b-con-box"><input type="text" class="b-input" id="user-id" placeholder="ID">
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="user-pw">Password</label><span
+                                        class="required">*</span></div>
+                                <div class="b-con-box"><input type="password" class="b-input" id="user-pw"
+                                        placeholder="Password"></div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="user-name">Username</label><span
+                                        class="required">*</span>
+                                </div>
+                                <div class="b-con-box"><input type="text" class="b-input" id="user-name"
+                                        placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="title">Title</label></div>
+                                <div class="b-con-box"><input type="text" class="b-input full" id="title"
+                                        placeholder="Title">
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="user-type">User Type</label>
+                                </div>
+                                <div class="b-con-box"><input type="text" class="b-input" id="user-type"
+                                        placeholder="User Type">
+                                </div>
+                                <div class="b-title-box"><label for="user-sub-type">User Sub Type</label>
+                                </div>
+                                <div class="b-con-box"><input type="text" class="b-input" id="user-sub-type"
+                                        placeholder="User Sub Type">
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="first-date">Date</label><span class="required">*</span>
+                                </div>
+                                <div class="b-con-box">
+                                    <input type="text" class="b-input datepicker" id="first-date" placeholder="First Date">
+                                    <span class="b-sign">~</span>
+                                    <input type="text" class="b-input datepicker" id="end-date" placeholder="End Date">
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="first-phone">Contact</label><span
+                                        class="required">*</span>
+                                </div>
+                                <div class="b-con-box flex-box">
+                                    <select name="" id="first-phone" class="b-select">
+                                        <option value="">010</option>
+                                        <option value="">011</option>
+                                        <option value="">016</option>
+                                    </select>
+                                    <span class="b-sign">-</span>
+                                    <input type="text" class="b-input" id="middle-phone">
+                                    <span class="b-sign">-</span>
+                                    <input type="text" class="b-input" id="end-phone">
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box">File</div>
+                                <div class="b-con-box flex-box">
+                                    <input type="file" class="b-file hide" id="file">
+                                    <input type="text" class="b-input" placeholder="Attach File">
+                                    <label for="file" class="btn md btn-form">Find</label>
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="gender-female">Gender</label></div>
+                                <div class="b-con-box">
+                                    <ul class="input-box">
+                                        <li>
+                                            <input type="radio" checked class="b-radio" id="gender-female" name="gender">
+                                            <label for="gender-female">Female</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="b-radio" id="gender-male" name="gender">
+                                            <label for="gender-male">Male</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="hobby1">Hobby</label></div>
+                                <div class="b-con-box">
+                                    <ul class="input-box">
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby1" /><label
+                                                for="hobby1">Running</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby2" /><label
+                                                for="hobby2">Rugby</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby3" /><label
+                                                for="hobby3">Netball</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby4" /><label
+                                                for="hobby4">Travel</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby5" /><label
+                                                for="hobby5">Vacation</label></li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby6" /><label
+                                                for="hobby6">Driving</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby7" /><label
+                                                for="hobby7">Fishing</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby8" /><label
+                                                for="hobby8">Camping</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby9" /><label
+                                                for="hobby9">Baseball</label></li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby10" /><label
+                                                for="hobby10">Game</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby11" /><label
+                                                for="hobby11">Yoga</label>
+                                        </li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby12" /><label
+                                                for="hobby12">Sketching</label></li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby13" /><label
+                                                for="hobby13">Reading</label></li>
+                                        <li><input type="checkbox" class="b-chk" name="" id="hobby14" /><label
+                                                for="hobby14">Photography</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="email">Email</label></div>
+                                <div class="b-con-box flex-box">
+                                    <input type="text" class="b-input" id="email">
+                                    <span class="b-sign">@</span>
+                                    <label for="email-domain" class="hide"></label>
+                                    <select name="" id="email-domail" class="b-select">
+                                        <option value="">naver.com</option>
+                                        <option value="">nate.com</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="zip">Address</label></div>
+                                <div class="b-con-box">
+                                    <div class="b-line flex-box">
+                                        <input type="text" class="b-input" id="zip" placeholder="Zip">
+                                        <button class="btn md btn-form">Find</button>
+                                    </div>
+                                    <div class="b-line">
+                                        <label for="address1" class="hide"></label>
+                                        <input type="text" class="b-input full" id="address1" placeholder="Address">
+                                    </div>
+                                    <div class="b-line">
+                                        <label for="address2" class="hide"></label>
+                                        <input type="text" class="b-input full" id="address2" placeholder="Detail Address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b-row-box">
+                                <div class="b-title-box"><label for="memo">Memo</label></div>
+                                <div class="b-con-box">
+                                    <textarea class="b-textarea" id="memo"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-box center">
+                        <button type="submit" class="btn lg white">취소</button>
+                        <button type="submit" class="btn lg">등록</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> <!-- #wrap -->
+    <!-- Script -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
